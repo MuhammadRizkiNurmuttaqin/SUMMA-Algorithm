@@ -16,7 +16,7 @@ RUN useradd -m mpiuser && \
     chown -R mpiuser:mpiuser /home/mpiuser/.ssh
 
 # Salin dan compile program
-COPY sum.c /home/mpiuser/sum.c
+COPY p13_051.c /home/mpiuser/p13_051.c
 RUN mpicc /home/mpiuser/p13_051.c -o /home/mpiuser/p13_051 -lm && \
     chown mpiuser:mpiuser /home/mpiuser/sum
 
